@@ -4,8 +4,8 @@ module simple_4_mux(
     output [3:0]Y
 );
 
-assign Y = Enable ? (Sel == 'b00 ? A : // If 0, then... else
-           Sel == 'b01 ? B : // If 1, then... else
+assign Y = Enable ? (Sel == 'b00 ? A :
+           Sel == 'b01 ? B :
            Sel == 'b10 ? C : D) : 'b0000;
 
 endmodule
